@@ -1,17 +1,24 @@
 package application;
 	
 import javafx.application.Application;
+import javafx.geometry.Pos;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.text.Text;
 
 
 public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			BorderPane root = new BorderPane();
+			
+			Text helloWorld = new Text("Hello world");
+			BorderPane.setAlignment(helloWorld, Pos.CENTER);
+			
+			BorderPane root = new BorderPane(helloWorld);
 			Scene scene = new Scene(root,400,400);
+			
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);
 			primaryStage.show();
