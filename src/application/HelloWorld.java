@@ -10,7 +10,7 @@ import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 
 
-public class Main extends Application {
+public class HelloWorld extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
